@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { getRecipeImage } from '@/lib/images';
+import { getRecipeImage } from '@/lib/recipe_images';
 import type { Recipe } from '@prisma/client';
 
 type Props = {

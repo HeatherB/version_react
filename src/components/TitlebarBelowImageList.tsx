@@ -1,7 +1,7 @@
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
-import { getRecipeImage } from '@/lib/images';
+import { getRecipeImage } from '@/lib/recipe_images';
 import Image from 'next/image';
 
 export default function TitlebarBelowImageList() {

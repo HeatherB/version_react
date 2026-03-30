@@ -1,16 +1,18 @@
-import {useTranslations, useLocale} from 'next-intl';
+import {getTranslations} from 'next-intl/server';
 import TitlebarBelowImageList from '@/components/TitlebarBelowImageList';
 import RecipeGrid from '@/components/RecipeGrid';
+import { prisma } from '@/lib/db';
 
-export default function Home({}) {
-	const t = useTranslations('Homepage');
+export default async function Home() {
+	const t = await getTranslations('Homepage');
+	const recipes = await prisma.recipe.findMany();
 
 	return (
 		<>
 		<h1>
 			{t('title')}
 		</h1>
-		<RecipeGrid recipes={prismaData} />
+		<RecipeGrid recipes={recipes} />
 		</>
 	);
 }
