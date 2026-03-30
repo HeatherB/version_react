@@ -1,0 +1,50 @@
+globalThis.__BUILD_MANIFEST = {
+  "pages": {
+    "/_app": [
+      "static/chunks/0ugf_next_dist_compiled_0dz_bri._.js",
+      "static/chunks/0ugf_next_dist_shared_lib_01ud.4k._.js",
+      "static/chunks/0ugf_next_dist_client_0xci348._.js",
+      "static/chunks/0ugf_next_dist_0inswyo._.js",
+      "static/chunks/0ugf_next_app_01im0ko.js",
+      "static/chunks/[next]_entry_page-loader_ts_02gkb9-._.js",
+      "static/chunks/0ugf_react-dom_0z8n6gy._.js",
+      "static/chunks/0ugf_0zz66yk._.js",
+      "static/chunks/[root-of-the-server]__0gxat4g._.js",
+      "static/chunks/0r8j_school_frontend_upgrade_newness_site_versions_version_react_pages__app_07xvfw~._.js",
+      "static/chunks/0ynk_school_frontend_upgrade_newness_site_versions_version_react_pages__app_0agt0.b._.js"
+    ],
+    "/_error": [
+      "static/chunks/0ugf_next_dist_compiled_0dz_bri._.js",
+      "static/chunks/0ugf_next_dist_shared_lib_0pcsvnf._.js",
+      "static/chunks/0ugf_next_dist_client_0xci348._.js",
+      "static/chunks/0ugf_next_dist_0nqxjq4._.js",
+      "static/chunks/[next]_entry_page-loader_ts_0em86~t._.js",
+      "static/chunks/0ugf_react-dom_0z8n6gy._.js",
+      "static/chunks/0ugf_0zz66yk._.js",
+      "static/chunks/[root-of-the-server]__0~t6xxm._.js",
+      "static/chunks/0v4d_frontend_upgrade_newness_site_versions_version_react_pages__error_07xvfw~._.js",
+      "static/chunks/0it-_frontend_upgrade_newness_site_versions_version_react_pages__error_0xjpliv._.js"
+    ]
+  },
+  "devFiles": [],
+  "polyfillFiles": [
+    "static/chunks/0ugf_next_dist_build_polyfills_polyfill-nomodule.js"
+  ],
+  "lowPriorityFiles": [
+    "static/development/_buildManifest.js",
+    "static/development/_ssgManifest.js",
+    "static/development/_clientMiddlewareManifest.js"
+  ],
+  "rootMainFiles": [
+    "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_0nux4ha._.js",
+    "static/chunks/0ugf_next_dist_compiled_next-devtools_index_09.0618.js",
+    "static/chunks/0ugf_next_dist_compiled_react-dom_08dk_v~._.js",
+    "static/chunks/0ugf_next_dist_compiled_react-server-dom-turbopack_0a1app~._.js",
+    "static/chunks/0ugf_next_dist_compiled_0hy~xu0._.js",
+    "static/chunks/0ugf_next_dist_client_0chy0~4._.js",
+    "static/chunks/0ugf_next_dist_0i-zg77._.js",
+    "static/chunks/0ugf_@swc_helpers_cjs_0ak8asj._.js",
+    "static/chunks/0m4n_Projects_school_frontend_upgrade_newness_site_versions_version_react_0rqeker._.js",
+    "static/chunks/097~_Projects_school_frontend_upgrade_newness_site_versions_version_react_0gl1xg.._.js"
+  ]
+};

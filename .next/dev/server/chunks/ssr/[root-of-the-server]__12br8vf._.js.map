@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 10, "column": 0}, "map": {"version":3,"sources":["file:///Users/hsullivan/Documents/Projects/school/frontend_upgrade/newness/site_versions/version_react/src/app/%5Blocale%5D/page.tsx"],"sourcesContent":["import {useTranslations, useLocale} from 'next-intl';\n\nexport default function Home({}) {\n\tconst t = useTranslations('Homepage');\n\n\treturn (\n\t\t<h1>\n\t\t\t{t('title')}\n\t\t</h1>\n\t);\n}"],"names":["Home","t"],"mappings":";;;;;AAAA;;;AAEe,SAASA,KAAK,EAAE;IAC9B,MAAMC,IAAI,IAAA,qWAAe,EAAC;IAE1B,qBACC,kVAAC;kBACCA,EAAE;;;;;;AAGN"}}]
+}

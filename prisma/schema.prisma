@@ -1,0 +1,44 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Get a free hosted Postgres database in seconds: `npx create-db`
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Recipe {
+  id            Int           @id
+  name          String
+  minutes       Int
+  contributorId Int           @map("contributor_id")
+  submitted     DateTime
+  tags          String        // stored as JSON string
+  nutrition     String        // stored as JSON string
+  nSteps        Int           @map("n_steps")
+  steps         String        @db.Text // stored as JSON string
+  description   String?       @db.Text
+  ingredients   String        // stored as JSON string
+  nIngredients  Int           @map("n_ingredients")
+  interactions  Interaction[]
+
+  @@map("recipes")
+}
+
+model Interaction {
+  id       Int      @id @default(autoincrement())
+  userId   Int      @map("user_id")
+  recipeId Int      @map("recipe_id")
+  date     DateTime
+  rating   Int
+  review   String?  @db.Text
+
+  recipe   Recipe   @relation(fields: [recipeId], references: [id])
+
+  @@map("interactions")
+}

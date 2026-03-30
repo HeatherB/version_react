@@ -1,0 +1,38 @@
+building a new react/next.js site.
+
+React is a js library for building UI (user interfaces).
+Next.js is a full-stack framework built on top of React, with features for production-ready applications.
+
+
+setup a package.json file
+
+in a terminal window, 
+install npm
+install react
+install next
+install eslint
+install prettier
+install typescript
+
+
+start config files . . .
+
+
+
+begin building out site architecture  / folder structure
+
+create main layout and page files
+move into [locale] structure
+
+decide if pagesRouter or appRouter
+I went with appRouter
+
+
+setup i18n to support multi language content
+proxy is recommended to replace middleware at this point in time
+
+use docker desktop to manage local docker container to house postgresql of kaggle dataset
+allowed Claude to read csvs to determine columns from dataset to give to prisma schema
+
+generated prisma schema, had to use prisma6 i belive for comptability with nextjs
+then seed database, once able to connect

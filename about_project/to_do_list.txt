@@ -1,0 +1,19 @@
+setup language switching
+
+pull in kaggle db of recipes
+https://www.kaggle.com/datasets/shuyangli94/food-com-recipes-and-user-interactions
+- setup as database integration as this is common for production scalability
+use PostgreSQL, and setup in Docker container for local
+
+display recipes - build out UI
+
+build recommendation engine
+
+provide for accessibility concerns
+
+explain server-side rendering vs client-side rendering
+
+testing setup
+
+other common packages?
+look over some job postings for 'required' know-how to show off

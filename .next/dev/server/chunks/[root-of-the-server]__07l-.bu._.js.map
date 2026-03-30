@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 76, "column": 0}, "map": {"version":3,"sources":["file:///Users/hsullivan/Documents/Projects/school/frontend_upgrade/newness/site_versions/version_react/src/i18n/routing.ts"],"sourcesContent":["import {defineRouting} from 'next-intl/routing';\n\nexport const routing = defineRouting({\n  locales: ['en', 'fr', 'es'],\n  defaultLocale: 'en'\n});"],"names":["routing","locales","defaultLocale"],"mappings":";;;;AAAA;;AAEO,MAAMA,UAAU,IAAA,uVAAa,EAAC;IACnCC,SAAS;QAAC;QAAM;QAAM;KAAK;IAC3BC,eAAe;AACjB"}},
+    {"offset": {"line": 94, "column": 0}, "map": {"version":3,"sources":["file:///Users/hsullivan/Documents/Projects/school/frontend_upgrade/newness/site_versions/version_react/src/proxy.ts"],"sourcesContent":["import createMiddleware from 'next-intl/middleware';\nimport {routing} from './i18n/routing';\n\nconst intlMiddleware = createMiddleware(routing);\n\nexport function proxy(request: Request) {\n  return intlMiddleware(request);\n}\n\nexport const config = {\n  matcher: ['/', '/(en|fr|es)/:path*']\n};"],"names":["intlMiddleware","proxy","request","config","matcher"],"mappings":";;;;;;AAAA;AACA;;;AAEA,MAAMA,iBAAiB,IAAA,qSAAgB,EAAC,qOAAO;AAExC,SAASC,MAAMC,OAAgB;IACpC,OAAOF,eAAeE;AACxB;AAEO,MAAMC,SAAS;IACpBC,SAAS;QAAC;QAAK;KAAqB;AACtC"}}]
+}
