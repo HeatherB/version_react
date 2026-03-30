@@ -5,7 +5,8 @@
       "@/styles/*": ["styles/*"],
       "@/components/*": ["components/*"],
       "@generated/*": ["generated/*"],
-      "@/lib/*": ["lib/*"]
+      "@/lib/*": ["lib/*"],
+      "@/i18n/*": ["i18n/*"]
     },
     "target": "ES2017",
     "lib": [

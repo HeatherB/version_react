@@ -1,11 +1,31 @@
-export function getRecipeImage(recipeName: string, width = 400, height = 300): string {
-  // Use first 2-3 words for better search results
-  const searchTerm = recipeName.split(' ').slice(0, 3).join(' ');
-  return `https://source.unsplash.com/${width}x${height}/?food,${encodeURIComponent(searchTerm)}`;
+// Local recipe images from Kaggle dataset
+
+const FALLBACK_IMAGE = '/recipe-images/placeholder.jpg';
+
+/**
+ * Get the local image URL for a recipe.
+ * Images are stored in public/recipe-images/ during seeding.
+ */
+export function getRecipeImageUrl(imageName: string | null): string {
+  if (!imageName) {
+    return FALLBACK_IMAGE;
+  }
+  return `/recipe-images/${imageName}`;
 }
 
-// For a consistent image per recipe (won't change on refresh)
-export function getRecipeImageById(recipeId: number, recipeName: string, width = 400, height = 300): string {
-  const searchTerm = recipeName.split(' ').slice(0, 2).join(' ');
-  return `https://source.unsplash.com/${width}x${height}/?food,${encodeURIComponent(searchTerm)}&sig=${recipeId}`;
+/**
+ * Get recipe image with fallback support.
+ * Returns the local image path if available, otherwise a fallback.
+ */
+export function getRecipeImage(imageName: string | null): string {
+  return getRecipeImageUrl(imageName);
+}
+
+// Legacy function for backwards compatibility
+export async function fetchRecipeImage(recipeName: string): Promise<string> {
+  return FALLBACK_IMAGE;
+}
+
+export function getRecipeImageById(recipeId: number, recipeName: string): string {
+  return FALLBACK_IMAGE;
 }

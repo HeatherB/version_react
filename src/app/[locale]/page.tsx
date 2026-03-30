@@ -1,11 +1,11 @@
 import {getTranslations} from 'next-intl/server';
-import TitlebarBelowImageList from '@/components/TitlebarBelowImageList';
 import RecipeGrid from '@/components/RecipeGrid';
 import { prisma } from '@/lib/db';
 
 export default async function Home() {
 	const t = await getTranslations('Homepage');
-	const recipes = await prisma.recipe.findMany();
+	// Fetch recipes - images are now local, no API calls needed
+	const recipes = await prisma.recipe.findMany({ take: 20 });
 
 	return (
 		<>
@@ -13,7 +13,6 @@ export default async function Home() {
 			{t('title')}
 		</h1>
 		<RecipeGrid recipes={recipes} />
-		<TitlebarBelowImageList recipes={recipes} />
 		</>
 	);
 }

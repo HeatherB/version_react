@@ -12,32 +12,12 @@ datasource db {
 }
 
 model Recipe {
-  id            Int           @id
-  name          String
-  minutes       Int
-  contributorId Int           @map("contributor_id")
-  submitted     DateTime
-  tags          String        // stored as JSON string
-  nutrition     String        // stored as JSON string
-  nSteps        Int           @map("n_steps")
-  steps         String        @db.Text // stored as JSON string
-  description   String?       @db.Text
-  ingredients   String        // stored as JSON string
-  nIngredients  Int           @map("n_ingredients")
-  interactions  Interaction[]
+  id                  Int      @id @default(autoincrement())
+  title               String
+  ingredients         String   @db.Text  // stored as JSON array string
+  instructions        String   @db.Text
+  imageName           String?  @map("image_name")
+  cleanedIngredients  String   @db.Text  @map("cleaned_ingredients")  // stored as JSON array string
 
   @@map("recipes")
-}
-
-model Interaction {
-  id       Int      @id @default(autoincrement())
-  userId   Int      @map("user_id")
-  recipeId Int      @map("recipe_id")
-  date     DateTime
-  rating   Int
-  review   String?  @db.Text
-
-  recipe   Recipe   @relation(fields: [recipeId], references: [id])
-
-  @@map("interactions")
 }
