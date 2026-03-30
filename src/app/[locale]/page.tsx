@@ -13,6 +13,7 @@ export default async function Home() {
 			{t('title')}
 		</h1>
 		<RecipeGrid recipes={recipes} />
+		<TitlebarBelowImageList recipes={recipes} />
 		</>
 	);
 }

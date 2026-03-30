@@ -3,8 +3,13 @@ import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
 import { getRecipeImage } from '@/lib/recipe_images';
 import Image from 'next/image';
+import type { Recipe } from '@prisma/client';
 
-export default function TitlebarBelowImageList() {
+type Props = {
+  recipes: Recipe[];
+};
+
+export default function TitlebarBelowImageList({ recipes }: Props) {
   /*
   <img 
             src={getRecipeImage(recipe.name)} 
@@ -15,8 +20,8 @@ export default function TitlebarBelowImageList() {
           */
   return (
     <ImageList sx={{ width: 500, height: 450 }}>
-      {itemData.map((item) => (
-        <ImageListItem key={item.img}>
+      {recipes.map((recipe) => (
+        <ImageListItem key={recipe.id}>
           <Image
             src={getRecipeImage(recipe.name, 800, 600)}
             alt={recipe.name}
@@ -25,8 +30,8 @@ export default function TitlebarBelowImageList() {
             unoptimized  // Required for external URLs
           />
           <ImageListItemBar
-            title={item.title}
-            subtitle={<span>by: {item.author}</span>}
+            title={recipe.name}
+            subtitle={<span>by: {recipe.contributorId}</span>}
             position="below"
           />
         </ImageListItem>
