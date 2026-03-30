@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 3, "column": 0}, "map": {"version":3,"sources":["file:///Users/hsullivan/Documents/Projects/school/frontend_upgrade/newness/site_versions/version_react/messages/fr.json.%5Bjson%5D.cjs/turbopack%3A/Documents/Projects/school/frontend_upgrade/newness/site_versions/version_react/messages/fr.json"],"sourcesContent":["{\"Homepage\":{\"title\":\"Bonjour monde!\"}}"],"names":[],"mappings":""}}]
-}
