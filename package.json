@@ -8,6 +8,7 @@
     "prettier": "prettier --check \"src/**/*.{ts,tsx,js,jsx,json,css}\"",
     "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx,json,css}\""
   },
+  "homepage": "https://HeatherB.github.io/version_react/",
   "prisma": {
     "seed": "ts-node prisma/seed.ts"
   },
