@@ -9,9 +9,7 @@ type Props = {
 // Parse Python-style list string to array
 function parseIngredients(ingredientsStr: string): string[] {
   try {
-    const jsonString = ingredientsStr
-      ?.replace(/'/g, '"')
-      .replace(/\\"/g, "'");
+    const jsonString = ingredientsStr?.replace(/'/g, '"').replace(/\\"/g, "'");
     const ingredients = JSON.parse(jsonString || '[]');
     return Array.isArray(ingredients) ? ingredients : [];
   } catch {
@@ -33,14 +31,14 @@ export default function RecipeRecipe({ recipe }: Props) {
       />
       <div className="recipe-recipe-content">
         <h1>{recipe.title}</h1>
-        
+
         <h2>Ingredients</h2>
         <ul>
           {ingredients.map((ingredient, index) => (
             <li key={index}>{ingredient}</li>
           ))}
         </ul>
-        
+
         <h2>Instructions</h2>
         <p>{recipe.instructions}</p>
       </div>

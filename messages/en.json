@@ -1,5 +1,24 @@
 {
-  "Homepage": {
-    "title": "Hello world!"
+  "HomeHero": {
+    "title": "What's For Dinner Tonight?",
+    "subTitle": "Search our database of recipes, and find that perfect dish!"
+  },
+  "Navigation": {
+    "home": "Home",
+    "search": "Search"
+  },
+  "Search": {
+    "placeholderBar": "Search recipes. . .",
+    "ariaBar": "Search recipes",
+    "button": "Search",
+    "title": "Search Recipes",
+    "results": "{count} résultats pour \"{query}\"",
+    "trySearch": "Enter a search term to find recipes.",
+    "noResults": "No recipes found. Try a different search term."
+  },
+  "Favorites": {
+    "title": "Favorite Recipes",
+    "add": "Add to Favorites",
+    "remove": "Remove"
   }
 }

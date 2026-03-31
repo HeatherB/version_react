@@ -1,31 +1,22 @@
 import Image from 'next/image';
-import {Link} from '@/i18n/navigation';
+import { Link } from '@/i18n/navigation';
+import FavoritesBar from '@/components/FavoritesBar';
 import type { Recipe } from '@prisma/client';
 import { getRecipeImageUrl } from '@/lib/recipe_images';
+import styled from 'styled-components';
 
 type Props = {
   recipe: Recipe;
 };
 
-export default function RecipeCard({ recipe }: Props) {
-  // Parse ingredients to count them
-  // cleanedIngredients is a Python-style list string with single quotes, not JSON
-  let ingredientCount = 0;
-  try {
-    // Convert Python-style single quotes to double quotes for JSON parsing
-    const jsonString = recipe.cleanedIngredients
-      ?.replace(/'/g, '"')  // Replace single quotes with double quotes
-      .replace(/\\"/g, "'"); // Restore escaped quotes that were apostrophes
-    const ingredients = JSON.parse(jsonString || '[]');
-    console.log('ingredients ', ingredients);
-    ingredientCount = Array.isArray(ingredients) ? ingredients.length : 0;
-    console.log('ingredientCount  ', ingredientCount );
-  } catch {
-    ingredientCount = 0;
-  }
+const Wrapper = styled.div`
+  position: relative;
+`;
 
+export default function RecipeCard({ recipe }: Props) {
   return (
-    <div className="recipe-card">
+    <Wrapper className="recipe-card">
+      <FavoritesBar item={recipe} />
       <Image
         src={getRecipeImageUrl(recipe.imageName)}
         alt={recipe.title}
@@ -37,6 +28,6 @@ export default function RecipeCard({ recipe }: Props) {
         <h3>{recipe.title}</h3>
         <Link href={`/recipe/${recipe.id}`}>View Recipe</Link>
       </div>
-    </div>
+    </Wrapper>
   );
 }

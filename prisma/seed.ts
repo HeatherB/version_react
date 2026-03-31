@@ -80,8 +80,8 @@ async function main() {
       
       imported++;
       if (imported % 100 === 0) console.log(`Imported ${imported} recipes...`);
-    } catch (e: any) {
-      console.log(`Skipped row ${i}: ${e.message}`);
+    } catch (e: unknown) {
+      console.log(`Skipped row ${i}: ${e instanceof Error ? e.message : String(e)}`);
     }
   }
   

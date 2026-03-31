@@ -10,6 +10,9 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  compiler: {
+    styledComponents: true,
+  },
 };
  
 const withNextIntl = createNextIntlPlugin();

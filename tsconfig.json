@@ -4,6 +4,7 @@
     "paths": {
       "@/styles/*": ["styles/*"],
       "@/components/*": ["components/*"],
+      "@/context/*": ["context/*"],
       "@generated/*": ["generated/*"],
       "@/lib/*": ["lib/*"],
       "@/i18n/*": ["i18n/*"]

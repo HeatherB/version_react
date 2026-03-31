@@ -10,8 +10,8 @@ export async function GET(request: NextRequest) {
 
   if (!PEXELS_API_KEY) {
     // Fallback to a default food image
-    return NextResponse.json({ 
-      url: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop'
+    return NextResponse.json({
+      url: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
     });
   }
 
@@ -33,22 +33,22 @@ export async function GET(request: NextRequest) {
     }
 
     const data = await response.json();
-    
+
     if (data.photos && data.photos.length > 0) {
       const photo = data.photos[0];
-      return NextResponse.json({ 
-        url: `${photo.src.original}?auto=compress&cs=tinysrgb&w=${width}&h=${height}&fit=crop`
+      return NextResponse.json({
+        url: `${photo.src.original}?auto=compress&cs=tinysrgb&w=${width}&h=${height}&fit=crop`,
       });
     }
 
     // Fallback if no results
-    return NextResponse.json({ 
-      url: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop'
+    return NextResponse.json({
+      url: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
     });
   } catch (error) {
     console.error('Pexels API error:', error);
-    return NextResponse.json({ 
-      url: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop'
+    return NextResponse.json({
+      url: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
     });
   }
 }

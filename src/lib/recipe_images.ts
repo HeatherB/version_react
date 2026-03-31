@@ -22,10 +22,10 @@ export function getRecipeImage(imageName: string | null): string {
 }
 
 // Legacy function for backwards compatibility
-export async function fetchRecipeImage(recipeName: string): Promise<string> {
+export async function fetchRecipeImage(): Promise<string> {
   return FALLBACK_IMAGE;
 }
 
-export function getRecipeImageById(recipeId: number, recipeName: string): string {
+export function getRecipeImageById(): string {
   return FALLBACK_IMAGE;
 }
