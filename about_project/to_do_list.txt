@@ -17,3 +17,7 @@ testing setup
 
 other common packages?
 look over some job postings for 'required' know-how to show off
+
+
+
+after prisma schema changes, run this - npx prisma generate

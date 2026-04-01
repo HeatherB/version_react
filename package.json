@@ -1,12 +1,13 @@
 {
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "prisma generate && next build",
     "start": "next start",
     "lint": "eslint",
     "lint:fix": "eslint --fix",
     "prettier": "prettier --check \"src/**/*.{ts,tsx,js,jsx,json,css}\"",
-    "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx,json,css}\""
+    "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx,json,css}\"",
+    "typecheck": "tsc --noEmit"
   },
   "homepage": "https://HeatherB.github.io/version_react/",
   "prisma": {
